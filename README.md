@@ -33,7 +33,7 @@ arch@android ~ $
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ArchDroid.git
+   git clone https://github.com/rismanasdk/ArchDroid.git
    cd ArchDroid
    ```
 
@@ -220,7 +220,3 @@ For issues, questions, or feature requests:
 - Open an [issue on GitHub](../../issues)
 - Check existing [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 - Review [BUILD.md](docs/BUILD.md) for common problems
-
----
-
-**Made with ❤️ for Linux terminal enthusiasts on Android**

@@ -84,5 +84,9 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.9.1")
 
     implementation("com.termux.termux-app:terminal-view:0.118.0")
-    implementation("com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava")
+    implementation("com.google.guava:guava:33.0.0-android")
+    
+    // ProfileInstaller dependencies
+    implementation("androidx.profileinstaller:profileinstaller:1.4.1")
+    implementation("androidx.concurrent:concurrent-futures:1.1.0")
 }

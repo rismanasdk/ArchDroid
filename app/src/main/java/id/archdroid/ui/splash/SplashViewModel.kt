@@ -25,9 +25,11 @@ class SplashViewModel @Inject constructor(
                 }
             } catch (e: Throwable) {
                 Log.e("SplashViewModel", "Installation failed", e)
-                state.value = InstallProgress.Error(
-                    e.message ?: "Install failed: ${e::class.java.simpleName}\n\nPlease check:\n1. Binary files exist in app/src/main/assets/bin/\n2. Internet connection for RootFS download\n3. Storage space available"
-                )
+                val userMessage = when (e) {
+                    is IllegalStateException -> e.message ?: "Installation setup failed"
+                    else -> "Installation failed: ${e.message ?: e::class.java.simpleName}"
+                }
+                state.value = InstallProgress.Error(userMessage)
             }
         }
     }
